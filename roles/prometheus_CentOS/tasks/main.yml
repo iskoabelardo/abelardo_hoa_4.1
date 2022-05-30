@@ -62,8 +62,8 @@
     mode: u+x,g+x,o+x
 
 - name: Copy prometheus to etc
-  shell: "cp /tmp.prometheus-2.2.1.linux-amd64/prometheus.yml /etc/prometheus/"
-  when: prometheus_archive.changed
+  shell: "cp -r /tmp/prometheus-2.2.1.linux-amd64/prometheus.yml /etc/prometheus/"
+  # when: prometheus_archive.changed
   
 - name: Copy consoles to etc
   shell: "cp -r /tmp/prometheus-2.2.1.linux-amd64/consoles /etc/prometheus/"

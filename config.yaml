@@ -8,12 +8,12 @@
     
     - name: Install nagios for Ubuntu
       include_role:
-        name: nagios_ubuntu
+        name: nagios_Ubuntu
       when: ansible_facts['distribution'] == 'Ubuntu'
 
     - name: Install nagios for Centos
       include_role:
-        name: nagios_centos
+        name: nagios_CentOS
       when: ansible_facts['distribution'] == 'CentOS'
     
     - name: Install grafana
@@ -22,10 +22,10 @@
           
     - name: Install prometheus for Ubuntu
       include_role:
-        name: prometheus_ubuntu
+        name: prometheus_Ubuntu
       when: ansible_facts['distribution'] == 'Ubuntu'
 
     - name: Install prometheus for Centos
       include_role:
-        name: prometheus_centos
+        name: prometheus_CentOS
       when: ansible_facts['distribution'] == 'CentOS'
